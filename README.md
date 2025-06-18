@@ -68,10 +68,10 @@ We used a publicly available dataset that includes:
 
 | **Training Instance** | **Optimizer Used** | **Regularizer Used** | **Epochs** | **Early Stopping** | **Dropout Rate** | **Learning Rate** | **Accuracy** | **F1 Score** | **Precision** | **Recall** | **Loss** |
 |-----------------------|--------------------|----------------------|------------|--------------------|------------------|-------------------|--------------|--------------|---------------|------------|----------|
-| Instance 1            | Adam               | None                 | 75         | No                 | 0                | 0.001             | 0.9433       | 0.9429       | 0.9444        | 0.9433     | 0.22     |
-| Instance 2            | Adam               | L2                   | 75         | No                 | 0                | 0.001             | 0.9500       | 0.9495       | 0.9519        | 0.9500     | 0.19     |
-| Instance 3            | RMSProp            | L2                   | 75         | Yes                | 0.2              | 0.0005            | 0.9300       | 0.9294       | 0.9301        | 0.9300     | 0.16     |
-| Instance 4            | Adam               | L2                   | 75         | Yes                | 0.1              | 0.001             | 0.9433       | 0.9429       | 0.9443        | 0.9433     | 0.11     |
+| Instance 1            | Adam               | None                 | 75         | ❌ No              | 0.0              | 0.001             | 0.9367       | 0.9367       | 0.9368        | 0.9367     | 0.22     |
+| Instance 2            | Adam               | L2                   | 75         | ❌ No              | 0.0              | 0.001             | 0.9400       | 0.9395       | 0.9416        | 0.9400     | 0.19     |
+| Instance 3            | RMSProp            | L2                   | 75         | ✅ Yes             | 0.2              | 0.0005            | 0.9433       | 0.9431       | 0.9440        | 0.9433     | 0.16     |
+| Instance 4            | Adam               | L2                   | 75         | ✅ Yes             | 0.1              | 0.001             | **0.9633**   | **0.9633**   | **0.9633**    | **0.9633** | **0.11** |
 
 
 ## 🧠 Best Performing Neural Network Instance
