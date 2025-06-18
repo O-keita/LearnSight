@@ -1,12 +1,12 @@
-# 🎯 LearnSight: Student Learning Support Classifier
+#  LearnSight: Student Learning Support Classifier
 
-## 🌍 Mission
+## Mission
 
 **LearnSight** is built to empower schools and educators—especially in underserved regions like The Gambia—to detect students' learning needs early and accurately. By using data-driven insights, LearnSight helps ensure that **no student falls through the cracks** by proactively identifying those who are at risk, average, or excelling.
 
 We believe every learner deserves the support they need to reach their full potential, and LearnSight is our tool to make that vision a reality.
 
-## 📌 Project Overview
+##  Project Overview
 
 **LearnSight** is a machine learning classification tool designed to predict a student's level of learning support needs using academic scores and socio-economic features. The ultimate goal is to help schools allocate resources more effectively by identifying:
 
@@ -14,7 +14,7 @@ We believe every learner deserves the support they need to reach their full pote
 - Those performing at an **Average** level who may benefit from mild support, and
 - **High Achievers** who may thrive with advanced opportunities.
 
-### 🧾 Dataset Features
+###  Dataset Features
 
 We used a publicly available dataset that includes:
 - Gender
@@ -26,17 +26,17 @@ We used a publicly available dataset that includes:
 - Reading Score
 - Writing Score
 
-### 🛠 Models Implemented
+###  Models Implemented
 - Classical ML: Logistic Regression, Support Vector Machine (SVM)
 - Neural Networks: Basic and Optimized versions
 - Advanced ML: XGBoost (with tuned hyperparameters)
 
-### 🧠 Prediction Classes
+###  Prediction Classes
 - `0`: **At Risk**
 - `1`: **Average**
 - `2`: **High Achiever**
 
-### 🔮 Sample Final Prediction
+###  Sample Final Prediction
 
 ```python
 {
@@ -64,7 +64,7 @@ We used a publicly available dataset that includes:
 
 
 
-## 📝 NN Model Discussion
+##  NN Model Discussion
 
 | **Training Instance** | **Optimizer Used** | **Regularizer Used** | **Epochs** | **Early Stopping** | **Dropout Rate** | **Learning Rate** | **Accuracy** | **F1 Score** | **Precision** | **Recall** | **Loss** |
 |-----------------------|--------------------|----------------------|------------|--------------------|------------------|-------------------|--------------|--------------|---------------|------------|----------|
@@ -74,7 +74,7 @@ We used a publicly available dataset that includes:
 | Instance 4            | Adam               | L2                   | 75         | ✅ Yes             | 0.1              | 0.001             | **0.9633**   | **0.9633**   | **0.9633**    | **0.9633** | **0.11** |
 
 
-## 🧠 Best Performing Neural Network Instance
+##  Best Performing Neural Network Instance
 
 - ### The best performing instance among all the four neural networks is **NN Instance 4**. It used:
   - **Adam** as the optimizer, which adapts the learning rate dynamically and performs well in most neural networks.
@@ -89,13 +89,13 @@ We used a publicly available dataset that includes:
 
 ---
 
-## 🏁 Summary: Best Model Comparison
+## Summary: Best Model Comparison
 
 The best performing model overall was **Logistic Regression**, with an impressive **accuracy of 96.67%**, narrowly outperforming the top neural network model.
 
 However, the neural network in **Instance 4** was a **very close contender** with **96.33% accuracy**, showing robust performance through **regularization, dropout, and early stopping**.
 
-### 🧪 Insights:
+###  Insights:
 
 - **Classical ML models** like **Logistic Regression** perform exceptionally well when the **data is clean** and **features are well-engineered**.
 - **Neural Networks** offer greater **flexibility** and **representation power**, but require more **careful hyperparameter tuning**.
@@ -103,7 +103,7 @@ However, the neural network in **Instance 4** was a **very close contender** wit
 - **SVM underperformed**, likely due to sensitivity to feature scaling or suboptimal kernel configuration.
 - **XGBoost**, with **95.67% accuracy**, also demonstrated strong ensemble power and generalization—surpassing most neural networks except Instance 4.
 
-### 🎓 Educational Impact:
+###  Educational Impact:
 
 In education-focused systems where **recall is vital**—especially for detecting "At Risk" students—both **Logistic Regression** and **NN Instance 4** are highly reliable models.  
 Logistic Regression may be favored for its **speed and interpretability**, while NN Instance 4 provides powerful performance with deeper learning capability for complex patterns.
