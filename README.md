@@ -1,5 +1,8 @@
 #  LearnSight: Student Learning Support Classifier
 
+#Video Link
+https://www.youtube.com/watch?v=-fDwwkeeLrE
+
 ## Mission
 
 **LearnSight** is built to empower schools and educators—especially in underserved regions like The Gambia—to detect students' learning needs early and accurately. By using data-driven insights, LearnSight helps ensure that **no student falls through the cracks** by proactively identifying those who are at risk, average, or excelling.
