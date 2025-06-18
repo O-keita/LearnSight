@@ -76,31 +76,35 @@ We used a publicly available dataset that includes:
 
 ## 🧠 Best Performing Neural Network Instance
 
-- ### The best performing instance among all the four neural networks is **NN Instance 2**. It used:
-  - **Adam** as the optimizer, which adapts the learning rate dynamically and performs well in most neural network tasks.
-  - **L2 Regularization**, which penalizes large weights and helps prevent overfitting.
-  - **No early stopping**, meaning the model trained for the full 75 epochs, yet still achieved excellent results suggesting a stable and well-generalizing configuration.
-  - **No dropout**, indicating the model was regularized only through L2, which proved sufficient and effective.
+- ### The best performing instance among all the four neural networks is **NN Instance 4**. It used:
+  - **Adam** as the optimizer, which adapts the learning rate dynamically and performs well in most neural networks.
+  - **L2 Regularization**, which penalizes large weights to help prevent overfitting and improve generalization.
+  - **Early Stopping** was applied, halting training at **epoch 68 out of 75** when validation loss plateaued. With a patience of 5, this means no improvement was detected since **epoch 63**.
+  - **A small dropout rate of 0.1**, meaning 10% of neurons were randomly dropped during training to reduce overfitting. Compared to higher dropout in previous models (e.g., 0.2), this setting led to better generalization.
 
 - ### Further Explaining the Metrics:
-  - From our best NN instance, we achieved an **accuracy of 95.00%**, meaning that **95% of students** in the test dataset were correctly classified as **High Achiever**, **Average**, or **At Risk**.
-  - The **F1 Score of 0.9495** shows our model maintains a near-perfect balance between **precision** and **recall** across all three student categories.
-  - The **Recall of 95%** ensures that the model correctly identifies almost all true students in each class—especially important when trying to **detect “At Risk” students** who may need academic intervention.
+  - From the best NN instance, we achieved an **accuracy of 0.9633**, meaning **96.33%** of students in the test set were correctly classified as either **High Achiever**, **Average**, or **At Risk**.
+  - The **F1 Score** of **0.9633** reflects a strong balance between precision and recall across all categories.
+  - The **Recall** of **96.33%** shows the model successfully identifies nearly all students in each class—**a critical factor** when identifying "At Risk" students who need early intervention and support.
 
 ---
 
 ## 🏁 Summary: Best Model Comparison
 
-The **best performing model overall** was **Logistic Regression**, with a **remarkable accuracy of 96.67%**, slightly outperforming the best neural network instance.
+The best performing model overall was **Logistic Regression**, with an impressive **accuracy of 96.67%**, narrowly outperforming the top neural network model.
 
-However, **NN Instance 2** was a close second (**accuracy: 95.00%**) and showcased powerful generalization capabilities using **L2 regularization alone**.
+However, the neural network in **Instance 4** was a **very close contender** with **96.33% accuracy**, showing robust performance through **regularization, dropout, and early stopping**.
 
 ### 🧪 Insights:
 
-- Classical ML models like **Logistic Regression** excel when **features are clean and well-engineered**.
-- Neural Networks offer better **flexibility** and **representation learning**, but demand **careful tuning** of architecture and hyperparameters.
-- **NN Instance 2** showed that **simple L2 regularization** alone can be extremely effective without requiring dropout or early stopping.
-- **SVM underperformed**, likely due to **lack of kernel tuning** or **feature scaling sensitivity**.
-- **XGBoost** also performed competitively (**accuracy: 95.67%**) and remains a strong general-purpose option.
+- **Classical ML models** like **Logistic Regression** perform exceptionally well when the **data is clean** and **features are well-engineered**.
+- **Neural Networks** offer greater **flexibility** and **representation power**, but require more **careful hyperparameter tuning**.
+- **Instance 4's performance** shows that combining **dropout**, **early stopping**, and **L2 regularization** can lead to highly accurate and generalizable models.
+- **SVM underperformed**, likely due to sensitivity to feature scaling or suboptimal kernel configuration.
+- **XGBoost**, with **95.67% accuracy**, also demonstrated strong ensemble power and generalization—surpassing most neural networks except Instance 4.
 
-In educational applications—where **recall for “At Risk” students** is critical—**Logistic Regression** and **NN Instance 2** are both **highly suitable**, depending on whether **interpretability or flexibility** is prioritized.
+### 🎓 Educational Impact:
+
+In education-focused systems where **recall is vital**—especially for detecting "At Risk" students—both **Logistic Regression** and **NN Instance 4** are highly reliable models.  
+Logistic Regression may be favored for its **speed and interpretability**, while NN Instance 4 provides powerful performance with deeper learning capability for complex patterns.
+
